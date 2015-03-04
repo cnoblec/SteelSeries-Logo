@@ -1,4 +1,4 @@
-
+ //<>//
 PFont myFont;
 float b;
 //int rainbowColour
@@ -20,30 +20,30 @@ void setup() {
   //
   //make it run the program just once
   //
-  
-  
+
+
   //
   //start record to save PDF
   //
   //beginRecord(PDF, "steelserieslogo.pdf");
-  
+
   //
   //set the background black
   //
   background(0);
 }
 void draw() {
-  
+  //noLoop();
   // set brightness value
   println(frameCount);
   b = 37.5*cos(radians(frameCount)) +62.5; 
 
   colorMode(HSB, 360, 100, 100);
-  noStroke();
 
   //
   //biggest white circle
   //
+  noStroke();
   fill(0, 0, b);
   ellipse(250, 200, 150, 150);
 
@@ -56,8 +56,10 @@ void draw() {
   //
   //smaller white inner circle
   //
+
   fill(0, 0, b);
   ellipse(250, 200, 65, 65);
+
 
   //
   //smallest black middle circle
@@ -98,7 +100,7 @@ void draw() {
   myFont = createFont("Verdana-Bold", 32);
   textFont(myFont);
   text("series", 225, 310);
-  
+
   //
   //Stop the PDF recording
   //
